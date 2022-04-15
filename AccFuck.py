@@ -3,14 +3,7 @@ import secmail
 from os import system
 from time import sleep
 from names import get_last_name
-from pyfiglet import figlet_format
 from webbrowser import open_new_tab
-from colored import fore, style, attr
-attr(0)
-print(f"""{fore.RED + style.BOLD}
-Script by deluvsushi
-Github : https://github.com/deluvsushi""")
-print(figlet_format("AminoAutoRegKilla", font="standard", width=60))
 sec_mail = secmail.SecMail()
 
 def open_verification_link(link: str):
