@@ -1,5 +1,5 @@
 names
-samino
+amino.fix==2.2.12
 secmail
 colored
 pyfiglet
