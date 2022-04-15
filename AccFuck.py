@@ -1,4 +1,4 @@
-import samino
+import aminofix
 import secmail
 from os import system
 from time import sleep
@@ -27,7 +27,7 @@ def get_verification_link(email: str):
     open_verification_link(link=verification_link)
 
 def activate_account(email: str, password: str, number: int, verification_code: int):
-    client = samino.Client()
+    client = aminofix.Client()
     client.login(email=email, password=password)
     client.verify_account(email=email, code=verification_code)
     print(f"[{number}]Account::: {email} is activated!")
@@ -40,7 +40,7 @@ def save_account(email: str, password: str):
 def auto_register(password: str, count: int):
     for i in range(count):
         try:
-            client = samino.Client() # for generating new device_id
+            client = aminofix.Client() # for generating new device_id
             email = sec_mail.generate_email()
             nickname = get_last_name()
             client.register(
